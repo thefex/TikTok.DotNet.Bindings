@@ -23,6 +23,8 @@ https://github.com/tiktok/tiktok-business-ios-sdk
 ```bash
 mkdir -p ~/tmp/tiktokbuild && cd ~/tmp/tiktokbuild
 
+# Pick a release tag from:
+# https://github.com/tiktok/tiktok-business-ios-sdk/releases
 SDK_VERSION=1.6.1
 curl -L -o TikTokBusinessSDK-${SDK_VERSION}.xcframework.zip \
   https://github.com/tiktok/tiktok-business-ios-sdk/releases/download/${SDK_VERSION}/TikTokBusinessSDK-${SDK_VERSION}.xcframework.zip
@@ -40,7 +42,7 @@ Expected output folder:
 If the binding project does not already exist, scaffold it:
 
 ```bash
-REPO=<path-to-repo-root>
+REPO=<path-to-repo-root> # e.g. "$(pwd)" when run from repo root
 cd "$REPO"
 
 dotnet new iosbinding -n TikTokBusinessSDK -o TikTokBusinessSDK
@@ -50,6 +52,7 @@ Copy native artifacts into the binding project:
 
 ```bash
 cp -R ~/tmp/tiktokbuild/TikTokBusinessSDK.xcframework "$REPO/TikTokBusinessSDK/"
+# This project keeps both names; debug reuses the same upstream release artifact.
 cp -R ~/tmp/tiktokbuild/TikTokBusinessSDK.xcframework "$REPO/TikTokBusinessSDK/TikTokBusinessSDK-debug.xcframework"
 ```
 
@@ -104,7 +107,7 @@ Also apply standard Sharpie cleanup:
 ### 5) Build and verify
 
 ```bash
-REPO=<path-to-repo-root>
+REPO=<path-to-repo-root> # e.g. "$(pwd)" when run from repo root
 cd "$REPO"
 
 dotnet build TikTokBusinessSDK/TikTokBusinessSDK.csproj -c Release
