@@ -25,6 +25,7 @@ mkdir -p ~/tmp/tiktokbuild && cd ~/tmp/tiktokbuild
 
 # Pick a release tag from:
 # https://github.com/tiktok/tiktok-business-ios-sdk/releases
+# Verify the latest available tag before setting SDK_VERSION.
 SDK_VERSION=1.6.1
 curl -L -o TikTokBusinessSDK-${SDK_VERSION}.xcframework.zip \
   https://github.com/tiktok/tiktok-business-ios-sdk/releases/download/${SDK_VERSION}/TikTokBusinessSDK-${SDK_VERSION}.xcframework.zip
@@ -119,7 +120,7 @@ dotnet build TikTokBusinessSDK/TikTokBusinessSDK.csproj -c Debug
 ### 6) Copilot execution plan (checklist)
 
 - [ ] Download target TikTok SDK `.xcframework` from GitHub Releases
-- [ ] Ensure/create `.NET iOS` binding project (`dotnet new iosbinding` if missing)
+- [ ] Ensure/create .NET iOS binding project (`dotnet new iosbinding` if missing)
 - [ ] Copy `.xcframework` into binding project and verify `.csproj` `NativeReference`
 - [ ] Run Sharpie on device header from `ios-arm64` slice
 - [ ] Diff and merge generated APIs/enums into binding files
