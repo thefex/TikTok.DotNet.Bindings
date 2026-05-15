@@ -4,13 +4,24 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
-
-    <!--
-      Enable trim analyzers for class libraries.
-      To learn more, see: https://learn.microsoft.com/dotnet/core/deploying/trimming/prepare-libraries-for-trimming
-    -->
     <IsTrimmable>true</IsTrimmable>
+
+    <!-- NuGet package metadata -->
+    <PackageId>TikTok.DotNet.Bindings</PackageId>
+    <Version>1.6.1</Version>
+    <Authors>thefex</Authors>
+    <Description>.NET iOS bindings for the TikTok Business SDK (v1.6.1). Not affiliated with TikTok.</Description>
+    <PackageTags>tiktok;ios;bindings;xamarin;maui</PackageTags>
+    <RepositoryUrl>https://github.com/thefex/TikTok.DotNet.Bindings</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
