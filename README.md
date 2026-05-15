@@ -42,7 +42,7 @@ Expected output folder:
 If the binding project does not already exist, scaffold it:
 
 ```bash
-REPO=<path-to-repo-root> # e.g. "$(pwd)" when run from repo root
+REPO="${PWD}" # run from repo root
 cd "$REPO"
 
 dotnet new iosbinding -n TikTokBusinessSDK -o TikTokBusinessSDK
@@ -107,7 +107,7 @@ Also apply standard Sharpie cleanup:
 ### 5) Build and verify
 
 ```bash
-REPO=<path-to-repo-root> # e.g. "$(pwd)" when run from repo root
+REPO="${PWD}" # run from repo root
 cd "$REPO"
 
 dotnet build TikTokBusinessSDK/TikTokBusinessSDK.csproj -c Release
