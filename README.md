@@ -44,7 +44,7 @@ If the binding project does not already exist, scaffold it:
 
 ```bash
 cd /path/to/TikTok.DotNet.Bindings
-REPO="${PWD}" # captures current repo root for reuse
+REPO="${PWD}" # captures current repo root for commands below
 
 dotnet new iosbinding -n TikTokBusinessSDK -o TikTokBusinessSDK
 ```
@@ -110,7 +110,7 @@ Also apply standard Sharpie cleanup:
 
 ```bash
 cd /path/to/TikTok.DotNet.Bindings
-REPO="${PWD}" # captures current repo root for reuse
+REPO="${PWD}" # redefine so this section also works if run independently
 
 dotnet build TikTokBusinessSDK/TikTokBusinessSDK.csproj -c Release
 dotnet build TikTokBusinessSDK/TikTokBusinessSDK.csproj -c Debug
