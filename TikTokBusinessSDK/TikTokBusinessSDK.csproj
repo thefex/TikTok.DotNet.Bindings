@@ -7,7 +7,7 @@
     <IsTrimmable>true</IsTrimmable>
 
     <!-- NuGet package metadata -->
-    <PackageId>TikTok.DotNet.Bindings</PackageId>
+    <PackageId>TikTok.BusinessSDK.DotNet.Bindings</PackageId>
     <Version>1.6.1</Version>
     <Authors>thefex</Authors>
     <Description>.NET iOS bindings for the TikTok Business SDK (v1.6.1). Not affiliated with TikTok.</Description>
@@ -15,12 +15,12 @@
     <RepositoryUrl>https://github.com/thefex/TikTok.DotNet.Bindings</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReadmeFile>SKILL.md</PackageReadmeFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="../README.md" Pack="true" PackagePath="\" />
+    <None Include="../SKILL.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
