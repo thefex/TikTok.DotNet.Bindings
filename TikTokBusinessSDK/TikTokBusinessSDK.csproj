@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-ios</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+    <IsTrimmable>true</IsTrimmable>
+
+    <!-- NuGet package metadata -->
+    <PackageId>TikTok.BusinessSDK.DotNet.Bindings</PackageId>
+    <Version>1.6.1</Version>
+    <Authors>thefex</Authors>
+    <Description>.NET iOS bindings for the TikTok Business SDK (v1.6.1). Not affiliated with TikTok.</Description>
+    <PackageTags>tiktok;ios;bindings;xamarin;maui</PackageTags>
+    <RepositoryUrl>https://github.com/thefex/TikTok.DotNet.Bindings</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>SKILL.md</PackageReadmeFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../SKILL.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <NativeReference Include="TikTokBusinessSDK.xcframework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+      <ForceLoad>False</ForceLoad>
+    </NativeReference>
+  </ItemGroup>
+</Project>
