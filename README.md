@@ -53,7 +53,8 @@ Copy native artifacts into the binding project:
 
 ```bash
 cp -R ~/tmp/tiktokbuild/TikTokBusinessSDK.xcframework "$REPO/TikTokBusinessSDK/"
-# This project keeps both names; debug reuses the same upstream release artifact.
+# Workaround: Releases provide one xcframework artifact, and this project expects both
+# release and -debug folder names, so the same artifact is copied under both names.
 cp -R ~/tmp/tiktokbuild/TikTokBusinessSDK.xcframework "$REPO/TikTokBusinessSDK/TikTokBusinessSDK-debug.xcframework"
 ```
 
